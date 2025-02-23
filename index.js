@@ -170,7 +170,7 @@ async function run() {
       }
     });
 
-    // Delete a review by its ID
+    // Delete a review by  ID
     app.delete("/reviews/:id", async (req, res) => {
       const id = req.params.id;
       if (!ObjectId.isValid(id)) {
