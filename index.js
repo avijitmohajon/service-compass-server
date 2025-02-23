@@ -89,7 +89,7 @@ async function run() {
       }
     });
 
-    // Get the count of all users
+    // count of all users
     app.get("/users/count", async (req, res) => {
       try {
         const usersCollection = client.db("servicesDatabase").collection("users");
