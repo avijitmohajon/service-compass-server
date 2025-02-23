@@ -100,7 +100,7 @@ async function run() {
       }
     });
 
-    // Get the count of all reviews
+    // count of all reviews
     app.get("/reviews/count", async (req, res) => {
       try {
         const reviewCount = await reviewCollection.countDocuments();
