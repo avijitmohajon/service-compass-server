@@ -110,7 +110,7 @@ async function run() {
       }
     });
 
-    // Get the count of all services
+    // count of all services
     app.get("/service/count", async (req, res) => {
       try {
         const serviceCount = await serviceCollection.countDocuments();
@@ -119,13 +119,6 @@ async function run() {
         res.status(500).send({ error: 'Failed to fetch service count' });
       }
     });
-
-
-
-
-
-
-    
 
     // Post a new service
     app.post("/services", async (req, res) => {
