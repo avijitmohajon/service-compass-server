@@ -5,11 +5,11 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Middleware for enabling CORS and parsing JSON data
+// Middleware 
 app.use(cors());
 app.use(express.json());
 
-// MongoDB URI from environment variables
+// MongoDB URI 
 const uri = `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}@cluster0.wye4e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -29,7 +29,7 @@ async function run() {
     // await client.db("admin").command({ ping: 1 });
     // console.log("Wow. You successfully connected to MongoDB successfully!");
 
-    // Service and Review Collections
+    // Service and Review Collections in database
     const serviceCollection = client.db("servicesDatabase").collection("services");
     const reviewCollection = client.db("servicesDatabase").collection("reviews");
 
