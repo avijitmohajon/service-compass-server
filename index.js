@@ -27,7 +27,7 @@ async function run() {
     // await client.connect();
     // Send a ping to confirm a successful connection
     // await client.db("admin").command({ ping: 1 });
-    // console.log("Hey developer. You successfully connected to MongoDB successfully!");
+    // console.log("Wow. You successfully connected to MongoDB successfully!");
 
     // Service and Review Collections
     const serviceCollection = client.db("servicesDatabase").collection("services");
@@ -43,7 +43,7 @@ async function run() {
       }
     });
 
-    // Get a specific service by ID with validation for ObjectId format
+    // a specific service by ID with validation for ObjectId format
     app.get("/services/:id", async (req, res) => {
       const id = req.params.id;
       if (!ObjectId.isValid(id)) {
