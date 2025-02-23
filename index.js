@@ -75,7 +75,7 @@ async function run() {
       }
     });
 
-    // Get reviews submitted by a specific user
+    // reviews submitted by a specific user
     app.get("/user-reviews", async (req, res) => {
       const { email } = req.query;
       if (!email) {
