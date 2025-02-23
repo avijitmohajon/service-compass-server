@@ -27,9 +27,6 @@ npm install
 Set up environment variables:
 Create a .env file in the root directory.
 Add your MongoDB connection string and Firebase credentials.
-Start the server:
-npm start
-The server will be running on http://localhost:5000.
 
 Deployment
 Prepare for deployment:
